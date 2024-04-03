@@ -14,4 +14,7 @@ echo "test:test" | sudo chpasswd
 sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/g' /etc/ssh/sshd_config
 sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config
 
+echo "test ALL=(ALL) NOPASSWD: ALL" | sudo tee -a /etc/sudoers
+
 systemctl restart sshd
+systemctl enable containerd
