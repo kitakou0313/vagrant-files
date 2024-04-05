@@ -11,7 +11,7 @@ tar Cxzvvf /usr/local nerdctl-full-1.7.5-linux-amd64.tar.gz
 # edit /etc/sudoers
 sed -i 's/Defaults[[:space:]]\+secure_path/# &/' /etc/sudoers
 echo 'Defaults    env_keep += "PATH"' >> /etc/sudoers
-echo "test ALL=(ALL) NOPASSWD: ALL" | sudo tee -a /etc/sudoers
+echo "test ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 
 # create user for ssh
 useradd -m -s /bin/bash test
