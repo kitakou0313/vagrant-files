@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Install commands
+sudo dnf install -y git
+
 # Install my dot file
 wget https://raw.githubusercontent.com/kitakou0313/dotfiles/main/installer.sh
 /bin/bash installer.sh
